@@ -58,17 +58,28 @@ it('Should yield 0 if an epmty array is provided', () => {
 //     }
 // });
 
+
 // If we add 'not' now test fails because we get unexpected error
 it('Should should throw an error if no value is passed into the function', () => {
     const resultFn = () => {
         add();
     }
 
-    //expect(resultFn).toThrow();
-    expect(resultFn).not.toThrow();
+    expect(resultFn).toThrow();
+    //expect(resultFn).not.toThrow();
 });
 
 
+it('Should throw an error if provided with multiple arguments instead of array', () => {
+    const num1 = 1;
+    const num2 = 2;
+
+    const resultFn = () => {
+        add(num1, num2);
+    }
+
+    expect(resultFn).toThrow();
+});
 
 
 
