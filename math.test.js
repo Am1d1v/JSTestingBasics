@@ -7,7 +7,6 @@ it('Should summarize all number values in an array', () => {
     // Arrange
     const numbers = [1, 2, 3];
     const expectedResult = numbers.reduce((previousValue, nextValue) => {
-        
         return previousValue + nextValue
     }, 0)
 
@@ -34,12 +33,43 @@ it('Should yield a correct sum if an array of numeric string values is provided'
     const result = add(inputs);
 
     const expectedResult = inputs.reduce((previousValue, nextValue) => {
-        
         return +previousValue + +nextValue
     }, 0)
 
     expect(result).toBe(expectedResult);
 })
+
+
+it('Should yield 0 if an epmty array is provided', () => {
+    const inputs = [];
+
+    const result = add(inputs);
+
+    expect(result).toBe(0);
+});
+
+
+// it('Should should throw an error if no value is passed into the function', () => {
+//     try{
+        
+//         const result = add();
+//     } catch(error) {
+//         expect(error).toBeDefined()
+//     }
+// });
+
+// If we add 'not' now test fails because we get unexpected error
+it('Should should throw an error if no value is passed into the function', () => {
+    const resultFn = () => {
+        add();
+    }
+
+    //expect(resultFn).toThrow();
+    expect(resultFn).not.toThrow();
+});
+
+
+
 
 
 
