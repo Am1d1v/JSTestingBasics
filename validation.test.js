@@ -1,7 +1,7 @@
 import {it, expect, describe} from 'vitest';
 import {validateStringNotEmpty, validateNumber} from './validation'
 
-// Test Suites
+// Validation Test Suites
 describe('validateNumber()', () => {
 
     it('Should yield a type of input', () => {
@@ -32,7 +32,7 @@ describe('validateStringNotEmpty()', () => {
     
         expect(validattionFn).toThrow();
     })
-    
+
 })
 
 // it('Should yield an error if an empty string is provided', () => {
