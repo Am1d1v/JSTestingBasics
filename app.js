@@ -1,6 +1,6 @@
-import { extractEnteredNumberValues } from './parser.js';
-import { calculateResult } from './math.js';
-import { GenerateResultText, OutputResult } from './Output.js';
+import { extractEnteredNumberValues } from './src/util/parser.js';
+import { calculateResult } from './src/util/math.js';
+import { GenerateResultText, OutputResult } from './src/util/Output.js';
 
 const form = document.querySelector('form');
 
