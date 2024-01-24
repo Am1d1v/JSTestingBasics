@@ -1,5 +1,5 @@
 import {it, expect, describe} from 'vitest';
-import {add} from '../math'
+import {add} from './math'
 
 // Math Test Suites
 describe('add()', () => {
