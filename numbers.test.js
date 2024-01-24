@@ -31,6 +31,11 @@ describe('cleanNumber', () => {
         const cleanedNumbers =  cleanNumber(numberValues);
 
         expect(cleanedNumbers[0]).toBeTypeOf('number');
+
+        //  ToBe vs ToEqual
+        // expect(numberValues).toBe([1, 2, 3]); // Error. They have different types
+        //expect(cleanedNumbers).toBe([1, 2, 3]);
+        expect(cleanedNumbers).toEqual([1, 2, 3]);
     });
 
     it('Should throw an error if an array with at least one empty string is provided', () => {
